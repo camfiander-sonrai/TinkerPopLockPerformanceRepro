@@ -1,0 +1,6 @@
+FROM tinkerpop/gremlin-console:3.5.3
+
+ADD lockDemo.groovy /groovy/lockDemo.groovy
+
+ENTRYPOINT [ "/docker-entrypoint.sh", "-e", "/groovy/lockDemo.groovy" ]
+
